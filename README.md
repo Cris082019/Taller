@@ -4,7 +4,5 @@
 
 <img width="1283" height="125" alt="image" src="https://github.com/user-attachments/assets/77869575-9840-4e9c-acc5-36458d740171" /> 
 La diferencia radica en la constancia del tiempo de los datos
-#
-#
 
-Latencia:  Es el tiempo total que tarda un paquete de datos en viajar desde el origen hasta el destino. Se mide generalmente en milisegundos (ms). Es el "retraso" puro.
+**Latencia:**  Es el tiempo total que tarda un paquete de datos en viajar desde el origen hasta el destino. Se mide generalmente en milisegundos (ms). Es el "retraso" puro.
