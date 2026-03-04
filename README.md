@@ -1,4 +1,4 @@
-#### Parcial
+# Parcial
 
 <img width="1511" height="262" alt="image" src="https://github.com/user-attachments/assets/bc927545-ff02-4f94-aa70-98d9415e1e08" />
 
