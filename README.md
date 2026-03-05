@@ -18,9 +18,11 @@ Aunque una latencia alta es molesta (causa ese silencio incómodo donde ambos ha
 
 <img width="1278" height="248" alt="image" src="https://github.com/user-attachments/assets/06145881-6e96-42bc-9852-31585283ece8" />
 
-1. Mayor eficiencia en términos de Throughput: UDP<br>
+1. Mayor eficiencia en términos de Throughput: **UDP**<br>
 UDP es más eficiente para mover grandes volúmenes de datos rápidamente.<br>
 
-2. Mayor control de la pérdida de paquetes: TCP<br>
-TCP es el protocolo "fiable" por excelencia.
+2. Mayor control de la pérdida de paquetes: **TCP**<br>
+TCP es el protocolo "fiable" por excelencia.<br><br>
+Si un paquete se pierde, el receptor lo nota por el número de secuencia y no envía el "ACK".<br>
+TCP entonces activa mecanismos de retransmisión para recuperar ese dato perdido. UDP, al carecer de estos campos, simplemente ignora si algo se perdió en el camino.
 
