@@ -44,7 +44,6 @@ Para que la información viaje por el cable o el aire, se debe encapsular en una
 <img width="1379" height="189" alt="image" src="https://github.com/user-attachments/assets/7590ef87-29c3-4397-8ab7-acc844559951" />
 
 **OID y su relación con la MIB**<br><br>
-
 **OID (Object Identifier):** Es un nombre numérico único (como 1.3.6.1.2...) que identifica de forma específica un objeto o variable dentro de un dispositivo de red.<br>
 **Relación con la MIB:** La MIB (Management Information Base) es la base de datos jerárquica que organiza todos estos objetos. Imagina que la MIB es un "mapa" o "biblioteca" y el OID es la "coordenada" o el "código de barras" exacto para encontrar un dato dentro de ella.
 
