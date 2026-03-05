@@ -48,4 +48,13 @@ Para que la información viaje por el cable o el aire, se debe encapsular en una
 **OID (Object Identifier):** Es un nombre numérico único (como 1.3.6.1.2...) que identifica de forma específica un objeto o variable dentro de un dispositivo de red.<br>
 **Relación con la MIB:** La MIB (Management Information Base) es la base de datos jerárquica que organiza todos estos objetos. Imagina que la MIB es un "mapa" o "biblioteca" y el OID es la "coordenada" o el "código de barras" exacto para encontrar un dato dentro de ella.
 
+**Operación para consultar bytes recibidos**
+El administrador debe utilizar la operación Get (SNMP Get).
+
+**¿Por qué Get?** Porque es la operación diseñada para que el administrador solicite activamente el valor actual de una variable específica (en este caso, el contador de bytes) desde el agente del dispositivo.
+
+**¿Por qué no usar un Trap?** Un Trap es una alerta no solicitada que envía el dispositivo solo cuando ocurre un evento crítico o inusual (ej. una interfaz se apaga o un error de energía).
+
+No es adecuado para consultar estadísticas rutinarias como el conteo de bytes, ya que saturaría la red enviando alertas constantes por un dato que cambia cada segundo.
+
 
