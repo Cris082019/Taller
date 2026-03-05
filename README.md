@@ -50,7 +50,7 @@ Para que la información viaje por el cable o el aire, se debe encapsular en una
 
 **SNMPv3**<br>
 ***Segurida:*** Avanzada. Introduce un modelo de seguridad basado en el usuario (USM) que permite autenticación y cifrado de los datos.<br>
-***Mensajes*** Introduce mensajes "Inform". A diferencia del Trap común, el mensaje Inform requiere una confirmación de recepción, asegurando que el administrador recibió el evento.<br><br>
+***Mensajes:*** Introduce mensajes "Inform". A diferencia del Trap común, el mensaje Inform requiere una confirmación de recepción, asegurando que el administrador recibió el evento.<br><br>
 
 Mientras que SNMPv2c es rápido pero inseguro, SNMPv3 es el estándar actual porque protege la gestión de la red mediante criptografía y añade fiabilidad a las notificaciones.<br><br>
 
