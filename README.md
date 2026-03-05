@@ -10,7 +10,6 @@ La diferencia radica en la constancia del tiempo de los datos <br><br>
 **Jitter:** Es la variación en el tiempo de llegada de los paquetes (la variabilidad de la latencia). Si un paquete tarda 50ms y el siguiente 80ms, ese cambio de ritmo es el jitter.<br>
 
 **¿Cuál tiene un impacto más negativo en VoIP?**
-
 El **Jitter** suele ser más perjudicial.<br>
 
 ¿Por qué?
