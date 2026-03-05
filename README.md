@@ -35,6 +35,10 @@ Su función es actuar como un "traductor" entre la Capa de Red (Capa 3) y la Cap
 Cuando un equipo conoce la dirección IP de destino pero no su dirección física (MAC), envía una consulta ARP.<br>
 El protocolo permite que los datos lleguen al hardware correcto dentro de la misma red local (LAN).<br>
 Como ves en tu imagen, la tabla mapea cada IP (ej. 192.168.238.254) con su correspondiente dirección física (ej. 00-50-56-ea-76-ae).<br><br>
-
+**Relación con la estructura de una trama Ethernet**<br>
+Para que la información viaje por el cable o el aire, se debe encapsular en una trama Ethernet. Aquí es donde ARP es vital:<br>
+**El destino físico:** Una trama Ethernet requiere obligatoriamente una MAC de destino en su cabecera para ser entregada por el Switch.<br>
+**La construcción de la trama:** Sin el protocolo ARP, el equipo emisor dejaría el campo "Destination MAC" vacío y la trama no podría enviarse.<br>
+**Encapsulamiento:** Una vez que ARP obtiene la dirección física y la guarda en la tabla (como se muestra en tu CMD), el sistema toma esa dirección y la coloca en el encabezado de la trama Ethernet, permitiendo que el paquete IP viaje de forma segura hacia el equipo correcto.
 
 
