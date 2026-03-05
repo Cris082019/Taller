@@ -41,4 +41,11 @@ Para que la información viaje por el cable o el aire, se debe encapsular en una
 **La construcción de la trama:** Sin el protocolo ARP, el equipo emisor dejaría el campo "Destination MAC" vacío y la trama no podría enviarse.<br>
 **Encapsulamiento:** Una vez que ARP obtiene la dirección física y la guarda en la tabla (como se muestra en tu CMD), el sistema toma esa dirección y la coloca en el encabezado de la trama Ethernet, permitiendo que el paquete IP viaje de forma segura hacia el equipo correcto.
 
+<img width="1379" height="189" alt="image" src="https://github.com/user-attachments/assets/7590ef87-29c3-4397-8ab7-acc844559951" />
+
+**OID y su relación con la MIB**<br><br>
+
+**OID (Object Identifier):** Es un nombre numérico único (como 1.3.6.1.2...) que identifica de forma específica un objeto o variable dentro de un dispositivo de red.<br>
+**Relación con la MIB:** La MIB (Management Information Base) es la base de datos jerárquica que organiza todos estos objetos. Imagina que la MIB es un "mapa" o "biblioteca" y el OID es la "coordenada" o el "código de barras" exacto para encontrar un dato dentro de ella.
+
 
