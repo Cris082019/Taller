@@ -7,4 +7,11 @@ La diferencia radica en la constancia del tiempo de los datos <br><br>
 
 **Latencia:**  Es el tiempo total que tarda un paquete de datos en viajar desde el origen hasta el destino. Se mide generalmente en milisegundos (ms). Es el "retraso" puro.<br>
 
-**Jitter:** Es la variación en el tiempo de llegada de los paquetes (la variabilidad de la latencia). Si un paquete tarda 50ms y el siguiente 80ms, ese cambio de ritmo es el jitter.
+**Jitter:** Es la variación en el tiempo de llegada de los paquetes (la variabilidad de la latencia). Si un paquete tarda 50ms y el siguiente 80ms, ese cambio de ritmo es el jitter.<br>
+
+¿Cuál tiene un impacto más negativo en VoIP?
+
+El Jitter suele ser más perjudicial.<br><br>
+
+¿Por qué?
+Aunque una latencia alta es molesta (causa ese silencio incómodo donde ambos hablan a la vez), el cerebro humano puede adaptarse a un retraso constante. Sin embargo, el jitter causa distorsión, audio entrecortado o robótico. Como los paquetes de voz deben reensamblarse en orden y a un ritmo constante para que el sonido sea fluido, si llegan a ritmos distintos, el procesador no puede reconstruir la señal correctamente, provocando una pérdida de calidad inmediata y frustrante.
