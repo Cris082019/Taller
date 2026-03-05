@@ -28,6 +28,7 @@ TCP entonces activa mecanismos de retransmisión para recuperar ese dato perdido
 
 <img width="1387" height="222" alt="image" src="https://github.com/user-attachments/assets/914fab82-bab6-42af-af64-66301d75b75e" />
 <img width="595" height="1074" alt="image" src="https://github.com/user-attachments/assets/12241b59-0b89-41c3-bafe-5f8ebc93a359" />
+
 El protocolo que llena esta tabla es el **ARP (Address Resolution Protocol)** o Protocolo de Resolución de Direcciones.<br><br>
 **Función principal en una red local**<br>
 Su función es actuar como un "traductor" entre la Capa de Red (Capa 3) y la Capa de Enlace de Datos (Capa 2).<br>
