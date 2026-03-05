@@ -41,6 +41,19 @@ Para que la información viaje por el cable o el aire, se debe encapsular en una
 **La construcción de la trama:** Sin el protocolo ARP, el equipo emisor dejaría el campo "Destination MAC" vacío y la trama no podría enviarse.<br>
 **Encapsulamiento:** Una vez que ARP obtiene la dirección física y la guarda en la tabla (como se muestra en tu CMD), el sistema toma esa dirección y la coloca en el encabezado de la trama Ethernet, permitiendo que el paquete IP viaje de forma segura hacia el equipo correcto.
 
+<img width="1387" height="119" alt="image" src="https://github.com/user-attachments/assets/258777f2-0fd4-4e5f-a25e-db669dd917ac" />
+
+**Diferencias clave: SNMPv2c vs. SNMPv3**<br>
+**SNMPv2c**<br>
+***Seguridad:*** Básica. Usa una "cadena de comunidad" (community string) que viaja en texto plano, lo que es vulnerable a intercepciones.<br>
+***Mensajes:*** Se limita principalmente a mensajes simples. No garantiza la recepción de notificaciones.<br><br>
+
+**SNMPv3**<br>
+***Segurida:*** Avanzada. Introduce un modelo de seguridad basado en el usuario (USM) que permite autenticación y cifrado de los datos.<br>
+***Mensajes*** Introduce mensajes "Inform". A diferencia del Trap común, el mensaje Inform requiere una confirmación de recepción, asegurando que el administrador recibió el evento.<br><br>
+
+Mientras que SNMPv2c es rápido pero inseguro, SNMPv3 es el estándar actual porque protege la gestión de la red mediante criptografía y añade fiabilidad a las notificaciones.<br><br>
+
 <img width="1379" height="189" alt="image" src="https://github.com/user-attachments/assets/7590ef87-29c3-4397-8ab7-acc844559951" />
 
 **OID y su relación con la MIB**
