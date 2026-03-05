@@ -48,7 +48,7 @@ Para que la información viaje por el cable o el aire, se debe encapsular en una
 **OID (Object Identifier):** Es un nombre numérico único (como 1.3.6.1.2...) que identifica de forma específica un objeto o variable dentro de un dispositivo de red.<br>
 **Relación con la MIB:** La MIB (Management Information Base) es la base de datos jerárquica que organiza todos estos objetos. Imagina que la MIB es un "mapa" o "biblioteca" y el OID es la "coordenada" o el "código de barras" exacto para encontrar un dato dentro de ella.
 
-**Operación para consultar bytes recibidos**
+**Operación para consultar bytes recibidos**<br>
 El administrador debe utilizar la operación Get (SNMP Get).
 
 **¿Por qué Get?** Porque es la operación diseñada para que el administrador solicite activamente el valor actual de una variable específica (en este caso, el contador de bytes) desde el agente del dispositivo.
