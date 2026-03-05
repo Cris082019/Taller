@@ -15,3 +15,12 @@ El **Jitter** suele ser más perjudicial.<br>
 
 ¿Por qué?
 Aunque una latencia alta es molesta (causa ese silencio incómodo donde ambos hablan a la vez), el cerebro humano puede adaptarse a un retraso constante. Sin embargo, el jitter causa distorsión, audio entrecortado o robótico. Como los paquetes de voz deben reensamblarse en orden y a un ritmo constante para que el sonido sea fluido, si llegan a ritmos distintos, el procesador no puede reconstruir la señal correctamente, provocando una pérdida de calidad inmediata y frustrante.
+
+<img width="1278" height="248" alt="image" src="https://github.com/user-attachments/assets/06145881-6e96-42bc-9852-31585283ece8" />
+
+1. Mayor eficiencia en términos de Throughput: UDP<br>
+UDP es más eficiente para mover grandes volúmenes de datos rápidamente.<br>
+
+2. Mayor control de la pérdida de paquetes: TCP<br>
+TCP es el protocolo "fiable" por excelencia.
+
