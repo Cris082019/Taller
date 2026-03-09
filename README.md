@@ -177,3 +177,32 @@ Evento que lo provoca: Este Trap específico se dispara cuando alguien intenta a
 🟢 ***Ventaja del Trap frente al Polling (consulta constante):***
 - **Inmediatez:** El Trap es enviado por el router en el mismo instante en que ocurre el error. Si usaras polling, tendrías que esperar hasta el siguiente ciclo de consulta (que podría ser minutos después) para enterarte.<br>
 - **Eficiencia de red:** El polling consume ancho de banda y CPU constantemente al preguntar "¿estás bien?" repetidamente. El Trap es pasivo; no genera tráfico hasta que realmente sucede algo importante, ahorrando recursos valiosos en la red.
+
+<img width="1045" height="259" alt="image" src="https://github.com/user-attachments/assets/2f76fde9-8eaa-40b0-b7d5-cc8b16d1325a" />
+<img width="840" height="77" alt="image" src="https://github.com/user-attachments/assets/3098c41c-754e-4070-9b4a-cbc3e3244cfc" />
+<img width="1064" height="445" alt="image" src="https://github.com/user-attachments/assets/a060fa46-86a4-4cfd-a6d0-b6c125d234f9" />
+<img width="944" height="451" alt="image" src="https://github.com/user-attachments/assets/4f28688b-3404-4f24-ad7a-a77e62de42e3" />
+🔴 ***Paso 1: Verificación de conectividad básica y resolución de nombres***
+**1. Conectividad IP con GitHub**<br>
+- **Comando:** ping github.com.<br>
+- **Capa OSI:** Verifica principalmente la Capa de Red (Capa 3), ya que comprueba que los paquetes pueden viajar de un extremo a otro a través de routers.<br>
+- **Protocolo:** Utiliza ICMP (Internet Control Message Protocol) para enviar mensajes de "Echo Request" y recibir "Echo Reply".
+
+🔴 ***2. Resolución de nombres (¿Cómo obtiene la IP de github.com?)***
+- **Proceso:** Su equipo realiza una consulta a un servidor de nombres. El sistema busca primero en el archivo hosts local y, si no está, envía una solicitud al servidor DNS configurado.<br>
+- **Protocolo:** El protocolo involucrado es DNS (Domain Name System).<br>
+- **Capa OSI:** Pertenece a la Capa de Aplicación (Capa 7).<br>
+Comando de diagnóstico manual: Si la resolución falla, usaría el comando nslookup github.com para verificar si el servidor DNS está respondiendo correctamente.
+
+🔴 ***3. Análisis de métricas (Ping exitoso pero con latencia alta y variable)***
+- **Métrica afectada:** El Jitter. La latencia alta es el retraso, pero si esa latencia es "variable", estamos ante una inestabilidad en el tiempo de llegada de los paquetes.<br>
+- **Influencia en el git push:** Una latencia alta hará que la subida se sienta lenta.<br>
+🔵 Un jitter elevado o la pérdida de paquetes asociada pueden provocar que la conexión TCP se vuelva ineficiente (retransmisiones constantes), lo que podría causar que el comando git push falle por "timeout" o tome mucho más tiempo del debido, afectando el throughput efectivo de la operación.
+
+
+
+
+
+
+
+
