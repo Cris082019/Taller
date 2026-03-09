@@ -143,9 +143,20 @@ La mejora más significativa es la eficiencia en el enrutamiento debido a la sim
 <img width="1044" height="319" alt="image" src="https://github.com/user-attachments/assets/f8bec04d-2eef-43b0-bd97-2890b9a317b9" /><vbr>
 El comando pathping 8.8.8.8 es una herramienta de trazado de ruta que proporciona información mucho más detallada que un simple ping o tracert.
 
-- 🔴 ***1. ¿Qué información proporciona que no daría un "ping" o un "tracert"?***<br>
+🔴 ***1. ¿Qué información proporciona que no daría un "ping" o un "tracert"?***<br>
 Mientras que ping solo te dice si hay conectividad básica y tracert te muestra la ruta (los saltos), pathping ofrece un análisis estadístico de la pérdida de paquetes por cada salto.
 
 **Diferencia con ping:** El ping solo analiza el destino final. pathping analiza cada router intermedio.<br>
 **Diferencia con tracert:** El tracert te da la ruta rápida, pero no te dice si un router específico está saturado. pathping identifica exactamente en qué nodo del camino se están perdiendo datos o dónde aumenta la latencia de forma crítica.
 
+🔴 ***2. Proceso que sigue pathping para obtener resultados***<br>
+Este comando funciona en dos fases bien diferenciadas:
+
+**Fase 1: Descubrimiento de la Ruta (Tipo Tracert)**<br>
+Primero, el comando envía paquetes ICMP con el TTL incrementado para identificar todos los routers (saltos) entre tu equipo y el destino (en este caso, los servidores DNS de Google, 8.8.8.8). Esta parte es rápida.
+
+<u>**Fase 2: Análisis de Estadísticas (El "Periodo de Cómputo")**<u><br>
+Una vez identificada la ruta, pathping se queda "escuchando" durante un tiempo determinado (normalmente 250 segundos).<br>
+- Envía múltiples paquetes a cada uno de los routers identificados en la Fase 1.<br>
+- Calcula el porcentaje de paquetes devueltos y perdidos por cada salto.<br>
+- Al finalizar, muestra una tabla detallada con los resultados de latencia y pérdida de paquetes para cada router.
