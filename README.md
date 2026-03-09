@@ -138,4 +138,14 @@ La mejora más significativa es la eficiencia en el enrutamiento debido a la sim
 
 ***¿Por qué es una mejora?*** En IPv4, cada router por el que pasa el paquete debe recalcular el Checksum porque el valor del TTL cambia en cada salto. Esto consume ciclos de CPU en el router. En IPv6, se confía en que las capas superiores (como TCP) o la capa de enlace (Ethernet) manejen la detección de errores, permitiendo que los routers procesen y reenvíen los paquetes mucho más rápido.
 
-+ **Cabeceras de longitud fija:** La cabecera de IPv6 tiene siempre un tamaño fijo de 40 bytes, lo que facilita su procesamiento por hardware especializado en comparación con la cabecera variable de IPv4.
+**Cabeceras de longitud fija:** La cabecera de IPv6 tiene siempre un tamaño fijo de 40 bytes, lo que facilita su procesamiento por hardware especializado en comparación con la cabecera variable de IPv4.
+
+<img width="1044" height="319" alt="image" src="https://github.com/user-attachments/assets/f8bec04d-2eef-43b0-bd97-2890b9a317b9" /><vbr>
+El comando pathping 8.8.8.8 es una herramienta de trazado de ruta que proporciona información mucho más detallada que un simple ping o tracert.
+
+- 🔴 ***1. ¿Qué información proporciona que no daría un "ping" o un "tracert"?***<br>
+Mientras que ping solo te dice si hay conectividad básica y tracert te muestra la ruta (los saltos), pathping ofrece un análisis estadístico de la pérdida de paquetes por cada salto.
+
+**Diferencia con ping:** El ping solo analiza el destino final. pathping analiza cada router intermedio.<br>
+**Diferencia con tracert:** El tracert te da la ruta rápida, pero no te dice si un router específico está saturado. pathping identifica exactamente en qué nodo del camino se están perdiendo datos o dónde aumenta la latencia de forma crítica.
+
