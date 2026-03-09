@@ -79,7 +79,7 @@ Basándonos en la captura, los campos de la cabecera Ethernet II son:
 🔴 **Origen (00:11:22:33:44:55):** Es la dirección MAC de la tarjeta de red (NIC) del dispositivo que generó la trama.<br>
 🔴 **Tipo (0x0800):** Este campo (EtherType) indica qué protocolo de la capa superior (Capa 3) está encapsulado dentro de los datos de la trama.
 
-***¿Qué significa el valor 0x0800 en el campo "Tipo"?***
+***¿Qué significa el valor 0x0800 en el campo "Tipo"?***<br>
 El valor 0x0800 es el código estándar para IPv4 (Internet Protocol version 4).<br>
 🔵 Su importancia: Le indica al receptor que, tras procesar la cabecera Ethernet, debe pasar el contenido restante a la pila del protocolo IP para su lectura. Si fuera, por ejemplo, 0x86DD, indicaría que el contenido es IPv6.
 
