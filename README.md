@@ -120,3 +120,13 @@ El puerto 80 es el puerto estándar y bien conocido para el protocolo HTTP (Hype
 
 **Contexto de la captura:** Esto coincide perfectamente con los datos del segmento que ves al final de la imagen: "GET /index.html HTTP/1.1", que es una petición web típica.
 
+<img width="961" height="88" alt="image" src="https://github.com/user-attachments/assets/21b3ec78-2521-4103-9b73-00dc71051203" />
+
+Si el paquete de la captura se enviara utilizando el protocolo IPv6 en lugar de IPv4, se producirían cambios estructurales profundos en la comunicación.
+
+***1. La Cabecera de Reemplazo***<br>
+La cabecera IPv4 (que en tu captura incluye campos como Protocolo: 6 y TTL: 128) sería reemplazada por la Cabecera Fija de IPv6.<br>
+
+En esta nueva estructura, los campos que viste en la captura cambiarían de nombre y función:<br>
+- 🟢 El campo TTL (Time To Live) de IPv4 se convierte en el campo Hop Limit (Límite de Saltos) en IPv6.<br>
+- 🟢 El campo Protocolo de IPv4 se convierte en el campo Next Header (Siguiente Cabecera) en IPv6.
