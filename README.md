@@ -174,6 +174,6 @@ Para obtener todos los valores de la interfaz del router en la IP 192.168.1.1, l
 🔵 ***2. Análisis del mensaje "authenticationFailure" Trap***<br>
 Evento que lo provoca: Este Trap específico se dispara cuando alguien intenta acceder al router mediante SNMP utilizando una cadena de comunidad incorrecta (por ejemplo, escribir "admin" en lugar de "public"). Es una alerta de seguridad que indica un posible acceso no autorizado o un error de configuración en un gestor.
 
-🟢 ***Ventaja del Trap frente al Polling (consulta constante):***<br>
-- **Inmediatez: El Trap es enviado por el router en el mismo instante en que ocurre el error. Si usaras polling, tendrías que esperar hasta el siguiente ciclo de consulta (que podría ser minutos después) para enterarte.<br>
+🟢 ***Ventaja del Trap frente al Polling (consulta constante):***
+- **Inmediatez:** El Trap es enviado por el router en el mismo instante en que ocurre el error. Si usaras polling, tendrías que esperar hasta el siguiente ciclo de consulta (que podría ser minutos después) para enterarte.<br>
 - **Eficiencia de red:** El polling consume ancho de banda y CPU constantemente al preguntar "¿estás bien?" repetidamente. El Trap es pasivo; no genera tráfico hasta que realmente sucede algo importante, ahorrando recursos valiosos en la red.
