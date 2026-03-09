@@ -206,8 +206,7 @@ Cuando finalmente ejecutas git push origin main, ocurre lo siguiente:<br>
 - **Capa de Red (Capa 3):** Se direccionan los paquetes hacia la IP de GitHub. Aquí se crean los paquetes.<br>
 - **Capa de Enlace (Capa 2):** Los datos se encapsulan para viajar por el medio físico de tu oficina. Aquí se crean las tramas.
 
-### 🔵 **Herramienta de verificación en este paso:**<br>
-Si el comando git push se queda "congelado", podrías usar netstat -an en tu CMD para verificar si existe una conexión en estado ESTABLISHED hacia la IP de GitHub en los puertos mencionados.
+### 🔵 **Herramienta de verificación en este paso:**<br>Si el comando git push se queda "congelado", podrías usar netstat -an en tu CMD para verificar si existe una conexión en estado ESTABLISHED hacia la IP de GitHub en los puertos mencionados.
 
 
 
