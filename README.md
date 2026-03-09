@@ -138,4 +138,4 @@ La mejora más significativa es la eficiencia en el enrutamiento debido a la sim
 
 ***¿Por qué es una mejora?*** En IPv4, cada router por el que pasa el paquete debe recalcular el Checksum porque el valor del TTL cambia en cada salto. Esto consume ciclos de CPU en el router. En IPv6, se confía en que las capas superiores (como TCP) o la capa de enlace (Ethernet) manejen la detección de errores, permitiendo que los routers procesen y reenvíen los paquetes mucho más rápido.
 
-+**Cabeceras de longitud fija:** La cabecera de IPv6 tiene siempre un tamaño fijo de 40 bytes, lo que facilita su procesamiento por hardware especializado en comparación con la cabecera variable de IPv4.
++ **Cabeceras de longitud fija:** La cabecera de IPv6 tiene siempre un tamaño fijo de 40 bytes, lo que facilita su procesamiento por hardware especializado en comparación con la cabecera variable de IPv4.
