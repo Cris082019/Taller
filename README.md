@@ -183,7 +183,7 @@ Evento que lo provoca: Este Trap específico se dispara cuando alguien intenta a
 <img width="1064" height="445" alt="image" src="https://github.com/user-attachments/assets/a060fa46-86a4-4cfd-a6d0-b6c125d234f9" />
 <img width="944" height="451" alt="image" src="https://github.com/user-attachments/assets/4f28688b-3404-4f24-ad7a-a77e62de42e3" />
 
-🔴 ***Paso 1: Verificación de conectividad básica y resolución de nombres***
+🔴 ***Paso 1: Verificación de conectividad básica y resolución de nombres***<br>
 **1. Conectividad IP con GitHub**<br>
 - **Comando:** ping github.com.<br>
 - **Capa OSI:** Verifica principalmente la Capa de Red (Capa 3), ya que comprueba que los paquetes pueden viajar de un extremo a otro a través de routers.<br>
