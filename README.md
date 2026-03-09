@@ -128,5 +128,5 @@ Si el paquete de la captura se enviara utilizando el protocolo IPv6 en lugar de 
 La cabecera IPv4 (que en tu captura incluye campos como Protocolo: 6 y TTL: 128) sería reemplazada por la Cabecera Fija de IPv6.<br>
 
 En esta nueva estructura, los campos que viste en la captura cambiarían de nombre y función:<br>
-- 🟢 El campo TTL (Time To Live) de IPv4 se convierte en el campo Hop Limit (Límite de Saltos) en IPv6.<br>
-- 🟢 El campo Protocolo de IPv4 se convierte en el campo Next Header (Siguiente Cabecera) en IPv6.
+- El campo TTL (Time To Live) de IPv4 se convierte en el campo Hop Limit (Límite de Saltos) en IPv6.<br>
+- El campo Protocolo de IPv4 se convierte en el campo Next Header (Siguiente Cabecera) en IPv6.
