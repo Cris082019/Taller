@@ -88,16 +88,16 @@ El valor 0x0800 es el código estándar para IPv4 (Internet Protocol version 4).
 **1. Campo:** Protocolo<br>
 Este campo indica cuál es el protocolo de la Capa de Transporte (Capa 4) que está encapsulado dentro del paquete IP.
 
-+Significado en tu caso: El valor 6 corresponde específicamente a TCP.
+Significado en tu caso: El valor 6 corresponde específicamente a TCP.
 
--Función: Al igual que el campo "Tipo" en Ethernet, el campo "Protocolo" le dice al receptor: "Oye, ya terminé de procesar la capa de red; ahora entrega estos datos al módulo de TCP". Si el valor fuera 17, se entregaría a UDP.
+Función: Al igual que el campo "Tipo" en Ethernet, el campo "Protocolo" le dice al receptor: "Oye, ya terminé de procesar la capa de red; ahora entrega estos datos al módulo de TCP". Si el valor fuera 17, se entregaría a UDP.
 
 **2. Campo:** TTL (Time To Live / Tiempo de Vida)<br>
 El TTL es un contador que limita la vida de un paquete en la red para evitar que circule infinitamente.
 
--Funcionamiento: Cada vez que el paquete atraviesa un router (un salto), este le resta 1 al valor del TTL.
+Funcionamiento: Cada vez que el paquete atraviesa un router (un salto), este le resta 1 al valor del TTL.
 
-+Significado en tu caso: Tu captura muestra un TTL de 128. Esto sugiere que el paquete fue generado por un sistema operativo Windows (que suele usar 128 como valor inicial) y que probablemente aún no ha pasado por muchos saltos.
+Significado en tu caso: Tu captura muestra un TTL de 128. Esto sugiere que el paquete fue generado por un sistema operativo Windows (que suele usar 128 como valor inicial) y que probablemente aún no ha pasado por muchos saltos.
 
 ***¿Por qué es importante el TTL en la red?***<br>
 Su importancia es vital para la estabilidad global de Internet:
@@ -106,4 +106,17 @@ Su importancia es vital para la estabilidad global de Internet:
 
 *Descarte de paquetes:* Cuando el TTL llega a 0, el router descarta el paquete y envía un mensaje ICMP de "Time Exceeded" al origen. Sin el TTL, los paquetes "huérfanos" saturarían los enlaces de red para siempre.
 
+<img width="966" height="82" alt="image" src="https://github.com/user-attachments/assets/c14c39e7-8d5b-453d-b34a-b610a233970a" />
+
+***1. Función de los Flags ACK y PSH***<br>
+**ACK (Acknowledgment):** Indica que el número de reconocimiento (Acknowledgment Number) en la cabecera es válido. Se utiliza para confirmar al emisor que los datos enviados anteriormente han sido recibidos correctamente. Es el mecanismo de "acuse de recibo" de TCP.
+
+**PSH (Push):** Le indica al receptor que debe pasar los datos a la aplicación (en este caso, el navegador web) de manera inmediata, sin esperar a que el búfer de recepción se llene. Esto asegura que la interacción sea fluida.
+
+***2. ¿Qué indica el "Puerto Destino: 80"?***<br>
+El puerto 80 es el puerto estándar y bien conocido para el protocolo HTTP (HyperText Transfer Protocol).
+
+**Servicio:** Indica que el cliente está intentando acceder a un servidor web para solicitar una página o recurso sin cifrar.
+
+**Contexto de la captura:** Esto coincide perfectamente con los datos del segmento que ves al final de la imagen: "GET /index.html HTTP/1.1", que es una petición web típica.
 
