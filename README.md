@@ -155,7 +155,7 @@ Este comando funciona en dos fases bien diferenciadas:
 **Fase 1: Descubrimiento de la Ruta (Tipo Tracert)**<br>
 Primero, el comando envía paquetes ICMP con el TTL incrementado para identificar todos los routers (saltos) entre tu equipo y el destino (en este caso, los servidores DNS de Google, 8.8.8.8). Esta parte es rápida.
 
-<u>**Fase 2: Análisis de Estadísticas (El "Periodo de Cómputo")**<u><br>
+<u>**Fase 2: Análisis de Estadísticas (El "Periodo de Cómputo")**</u><br>
 Una vez identificada la ruta, pathping se queda "escuchando" durante un tiempo determinado (normalmente 250 segundos).<br>
 - Envía múltiples paquetes a cada uno de los routers identificados en la Fase 1.<br>
 - Calcula el porcentaje de paquetes devueltos y perdidos por cada salto.<br>
