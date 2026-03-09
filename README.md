@@ -200,10 +200,14 @@ Comando de diagnóstico manual: Si la resolución falla, usaría el comando nslo
 - **Influencia en el git push:** Una latencia alta hará que la subida se sienta lenta.<br>
 🔵 Un jitter elevado o la pérdida de paquetes asociada pueden provocar que la conexión TCP se vuelva ineficiente (retransmisiones constantes), lo que podría causar que el comando git push falle por "timeout" o tome mucho más tiempo del debido, afectando el throughput efectivo de la operación.
 
+## ***Paso 2: Establecimiento de la conexión y subida (El "git push")***<br>
+Cuando finalmente ejecutas git push origin main, ocurre lo siguiente:<br>
+- **Capa de Transporte (Capa 4):** Se establece una sesión fiable mediante TCP (usualmente sobre el puerto 443 para HTTPS o 22 para SSH). Aquí se crean los segmentos.<br>
+- **Capa de Red (Capa 3):** Se direccionan los paquetes hacia la IP de GitHub. Aquí se crean los paquetes.<br>
+- **Capa de Enlace (Capa 2):** Los datos se encapsulan para viajar por el medio físico de tu oficina. Aquí se crean las tramas.
 
-
-
-
+🔵 # **Herramienta de verificación en este paso:**<br>
+Si el comando git push se queda "congelado", podrías usar netstat -an en tu CMD para verificar si existe una conexión en estado ESTABLISHED hacia la IP de GitHub en los puertos mencionados.
 
 
 
