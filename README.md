@@ -83,4 +83,27 @@ Basándonos en la captura, los campos de la cabecera Ethernet II son:
 El valor 0x0800 es el código estándar para IPv4 (Internet Protocol version 4).<br>
 🔵 Su importancia: Le indica al receptor que, tras procesar la cabecera Ethernet, debe pasar el contenido restante a la pila del protocolo IP para su lectura. Si fuera, por ejemplo, 0x86DD, indicaría que el contenido es IPv6.
 
+<img width="960" height="88" alt="image" src="https://github.com/user-attachments/assets/8454081c-2627-49e7-809c-4b8932e96018" />
+
+**1. Campo:** Protocolo<br>
+Este campo indica cuál es el protocolo de la Capa de Transporte (Capa 4) que está encapsulado dentro del paquete IP.
+
++Significado en tu caso: El valor 6 corresponde específicamente a TCP.
+
+-Función: Al igual que el campo "Tipo" en Ethernet, el campo "Protocolo" le dice al receptor: "Oye, ya terminé de procesar la capa de red; ahora entrega estos datos al módulo de TCP". Si el valor fuera 17, se entregaría a UDP.
+
+**2. Campo:** TTL (Time To Live / Tiempo de Vida)<br>
+El TTL es un contador que limita la vida de un paquete en la red para evitar que circule infinitamente.
+
+-Funcionamiento: Cada vez que el paquete atraviesa un router (un salto), este le resta 1 al valor del TTL.
+
++Significado en tu caso: Tu captura muestra un TTL de 128. Esto sugiere que el paquete fue generado por un sistema operativo Windows (que suele usar 128 como valor inicial) y que probablemente aún no ha pasado por muchos saltos.
+
+***¿Por qué es importante el TTL en la red?***<br>
+Su importancia es vital para la estabilidad global de Internet:
+
+*Prevención de bucles infinitos:* Si hay un error de configuración en las tablas de enrutamiento y un paquete entra en un bucle (girando entre los mismos routers), el TTL llegará eventualmente a 0.
+
+*Descarte de paquetes:* Cuando el TTL llega a 0, el router descarta el paquete y envía un mensaje ICMP de "Time Exceeded" al origen. Sin el TTL, los paquetes "huérfanos" saturarían los enlaces de red para siempre.
+
 
