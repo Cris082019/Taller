@@ -71,3 +71,15 @@ El administrador debe utilizar la operación Get (SNMP Get).
 No es adecuado para consultar estadísticas rutinarias como el conteo de bytes, ya que saturaría la red enviando alertas constantes por un dato que cambia cada segundo.
 
 
+<img width="1051" height="432" alt="image" src="https://github.com/user-attachments/assets/fdd33841-b13f-4330-9247-2ab184ab5297" /><br>
+
+Basándonos en la captura, los campos de la cabecera Ethernet II son:
+
+**Destino (aa:bb:cc:dd:ee:ff):** Es la dirección MAC del dispositivo receptor (o del siguiente salto, como un router) en la red local. Indica a qué hardware específico va dirigida la trama.
+
+**Origen (00:11:22:33:44:55):** Es la dirección MAC de la tarjeta de red (NIC) del dispositivo que generó la trama.
+
+**Tipo (0x0800):** Este campo (EtherType) indica qué protocolo de la capa superior (Capa 3) está encapsulado dentro de los datos de la trama.
+
+
+
