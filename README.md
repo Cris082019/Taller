@@ -160,3 +160,20 @@ Una vez identificada la ruta, pathping se queda "escuchando" durante un tiempo d
 - Envía múltiples paquetes a cada uno de los routers identificados en la Fase 1.<br>
 - Calcula el porcentaje de paquetes devueltos y perdidos por cada salto.<br>
 - Al finalizar, muestra una tabla detallada con los resultados de latencia y pérdida de paquetes para cada router.
+
+<img width="946" height="305" alt="image" src="https://github.com/user-attachments/assets/6d302c78-f200-469f-82c2-278884480984" /><br>
+Basándonos en el escenario de un router con SNMPv2c y comunidad "public", estas son las soluciones:
+
+🔵 ***1. Herramienta para "caminar" por el árbol MIB***<br>
+Para obtener todos los valores de la interfaz del router en la IP 192.168.1.1, la herramienta estándar de línea de comandos es snmpwalk.
+
+- **Cómo funciona:** Este comando realiza peticiones GetNext de forma sucesiva y automática. Empieza en un punto del árbol MIB y va "saltando" de OID en OID hasta recorrer toda la rama especificada, permitiéndote ver toda la configuración y estado del dispositivo de una sola vez.
+
+- **Ejemplo de uso:** snmpwalk -v 2c -c public 192.168.1.1
+
+🔵 ***2. Análisis del mensaje "authenticationFailure" Trap***<br>
+Evento que lo provoca: Este Trap específico se dispara cuando alguien intenta acceder al router mediante SNMP utilizando una cadena de comunidad incorrecta (por ejemplo, escribir "admin" en lugar de "public"). Es una alerta de seguridad que indica un posible acceso no autorizado o un error de configuración en un gestor.
+
+🟢 ***Ventaja del Trap frente al Polling (consulta constante):***<br>
+- **Inmediatez: El Trap es enviado por el router en el mismo instante en que ocurre el error. Si usaras polling, tendrías que esperar hasta el siguiente ciclo de consulta (que podría ser minutos después) para enterarte.<br>
+- **Eficiencia de red:** El polling consume ancho de banda y CPU constantemente al preguntar "¿estás bien?" repetidamente. El Trap es pasivo; no genera tráfico hasta que realmente sucede algo importante, ahorrando recursos valiosos en la red.
